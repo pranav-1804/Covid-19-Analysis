@@ -1,0 +1,135 @@
+{% extends "base.html" %} {% block content %}
+
+
+<div class="container">
+  
+    <h1 class='header'>Covid-19 Spread Analysis</h1>
+    
+    
+  <div class="row">
+    
+    <div class="col-4 confirmed">
+        <h5><font color="firebrick">Top 15 country</font></h5>
+        <p><font color="crimson">This is the countrywise Confirmed covid-19 data upto 20 july 2020.</font></p>
+        <table class="table-responsive-sm table-striped table-dark table-bordered table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Confirmed</tr>
+                </tr>
+        </thead>
+        <tbody>
+    {% for pair in pairs %}
+    <tr>
+    <td>{{ pair[0]}}</td>
+    <td>{{ pair[1]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+    
+  
+  </div>
+    <div class="col-8">
+        <h5 class='title'><font color="firebrick">Confirmed Cases</font></h5>
+        
+        {{cmap|safe}}
+      </div>
+        
+  </div>
+
+  <div class="row active"> 
+
+    <div class="col-4">
+      <h5><font color="firebrick">Top 15 country</font></h5>
+      <p><font color="crimson">This is the countrywise active covid-19 data upto 20 july 2020.</font></p>
+      <table class="table-responsive-sm table-striped table-dark table-bordered table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Active</tr>
+                </tr>
+        </thead>
+        <tbody>
+    {% for pairActive in pairsActive %}
+    <tr>
+    <td>{{ pairActive[0]}}</td>
+    <td>{{ pairActive[1]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+  </div>
+  <div class="col-8">
+    <h5 class='title'><font color="firebrick">Active Cases</font></h5>
+    
+    {{amap|safe}}
+  </div>
+  </div>
+
+
+  <div class="row recovered"> 
+
+    <div class="col-4">
+      <h5><font color="firebrick">Top 15 country</font></h5>
+      <p><font color="crimson">This is the countrywise recovered covid-19 data upto 20 july 2020.</font></p>
+      <table class="table-responsive-sm table-striped table-dark table-bordered table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Recovered</tr>
+                </tr>
+        </thead>
+        <tbody>
+    {% for pairRecovered in pairsRecovered %}
+    <tr>
+    <td>{{ pairRecovered[0]}}</td>
+    <td>{{ pairRecovered[1]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+  </div>
+  <div class="col-8">
+    <h5 class='title'><font color="firebrick">Recoverd Cases<font></h5>
+    
+    {{rmap|safe}}
+  </div>
+  </div>
+
+
+
+  <div class="row death"> 
+
+    <div class="col-4">
+      <h5><font color="firebrick">Top 15 country</font></h5>
+      <p><font color="crimson">This is the countrywise death covid-19 data upto 20 july 2020.</font></p>
+      <table class="table-responsive-sm table-striped table-dark table-bordered table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Death</tr>
+                </tr>
+        </thead>
+        <tbody>
+    {% for pairDeath in pairsDeaths %}
+    <tr>
+    <td>{{ pairDeath[0]}}</td>
+    <td>{{ pairDeath[1]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+  </div>
+  <div class="col-8">
+    <h5 class="title"> <font color="firebrick">Death Cases</font></h5>
+  
+    {{dmap|safe}}
+  </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

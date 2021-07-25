@@ -1,0 +1,48 @@
+body {
+    background-color: #f8f5f1;
+    color: white;
+  }
+  h1,
+  td,
+  tr {
+    color: white;
+  }
+  .header{
+    text-align: center;
+    font-family: 'Newsreader', serif;
+    font-size: 3.5rem;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: black;
+    
+  }
+  .confirmed{
+    padding-top: 5px;
+  }
+  .active{
+    padding-top: 50px;
+  }
+  .active .col-4{
+    padding-top: 1px;
+
+  }
+  .recovered{
+    padding-top: 50px;
+  }
+  .recovered .col-4{
+    padding-top: 1px;
+  }
+  .death{
+    padding-top: 50px;
+  }
+  .death .col-4{
+    padding-top: 1px;
+  }
+  .title{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 5px;
+    font-family: 'Calisto MT';
+  }
